@@ -1,22 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
-
+import Welcome from './componenets/Welcome';
+import WelcomeHooks from './componenets/WelcomeHook';
+import Cards from './componenets/Cards'
 function App() {
+ const Myname = "hassan"
+  function sayMyName(name){
+    return <h3>say {name} </h3>
+  }
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+       <h1> {sayMyName(Myname)}</h1>
+      
+       <Welcome age="29" />
+
+       < WelcomeHooks />
+       <Cards />
       </header>
     </div>
   );
